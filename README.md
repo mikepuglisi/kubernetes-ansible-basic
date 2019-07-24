@@ -13,6 +13,20 @@ Configure your inventory and run the following commands:
 * `ansible-playbook -i inventory kube-self-hosted-recovery.yml`
 
 
+## Manual Steps still needed
+
+Unfortunately, I still had to run the following on master node.
+
+```sudo cp /etc/kubernetes/admin.conf $HOME/
+sudo chown $(id -u):$(id -g) $HOME/admin.conf
+export KUBECONFIG=$HOME/admin.conf```
+
+https://github.com/kubernetes/kubernetes/issues/44665
+
+Note that there are tasks that supposedly perform these steps, but the files are moved to /root directory rather than our user. I need to move on to other things.
+
+
+
 Afterwards you can use the `kubectl` command using the kubemaster node's `root` account.
 
 
