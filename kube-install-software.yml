@@ -1,5 +1,5 @@
 # Install required software
-- hosts: kube-master:kube-node
+- hosts: kubemaster:kubenode
   become: yes
   tasks:
    - name: Get Kubernetes apt-key

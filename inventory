@@ -1,16 +1,16 @@
 
 [all]
-master01    ansible_host=192.168.1.220
-worker01    ansible_host=192.168.1.221
-worker02    ansible_host=192.168.1.222
+master01    ansible_host=209.60.76.140
+worker01    ansible_host=209.60.76.131
+worker02    ansible_host=209.60.76.132
 
 [all:vars]
 # Ubuntu uses python3 instead of python2, we need to set the interpreter for ansible
 ansible_python_interpreter=/usr/bin/python3
 
-[kube-master]
+[kubemaster]
 master01
 
-[kube-node]
+[kubenode]
 worker01
 worker02

@@ -1,5 +1,5 @@
 # Install the self-hosted-recovery to fix the issue described here: https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/#caveats
-- hosts: kube-master:kube-node
+- hosts: kubemaster:kubenode
   become: yes
   tasks:
    - name: Clone self-hosted-recovery
